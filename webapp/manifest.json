@@ -1,0 +1,289 @@
+{
+    "_version": "1.59.0",
+    "sap.app": {
+        "id": "leftmenu",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{Library Management}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.14.4",
+            "toolsId": "84e3bc4f-0f00-4448-b8bb-c824bbbf7691"
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "report-list": {
+                    "semanticObject": "report",
+                    "action": "list",
+                    "title": "{{flpTitle}}",
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    }
+                }
+            }
+        },
+        "dataSources": {
+            "ZLIBRARY_SRV": {
+                "uri": "/sap/opu/odata/sap/ZLIBRARY_SRV",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.127.1",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "leftmenu.i18n.i18n"
+                }
+            },
+            "nav": {
+                "type": "sap.ui.model.json.JSONModel",
+                "settings": {
+                    "defaultBindingMode": "OneWay"
+                }
+            },
+            "": {
+                "dataSource": "ZLIBRARY_SRV",
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "leftmenu.view",
+                "controlAggregation": "detailPages",
+                "controlId": "splitApp",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "login",
+                    "target": "login"
+                  },
+                {
+                    "name": "home",
+                    "pattern": "home",
+                    "target": "home"
+                },
+                {
+                    "pattern": "page1",
+                    "name": "page1",
+                    "target": "page1"
+                },
+                {
+                    "pattern": "page2",
+                    "name": "page2",
+                    "target": "page2"
+                },
+                {
+                    "pattern": "page3",
+                    "name": "page3",
+                    "target": "page3"
+                },
+                {
+                    "pattern": "page4",
+                    "name": "page4",
+                    "target": "page4"
+                },
+                {
+                    "pattern": "page5",
+                    "name": "page5",
+                    "target": "page5"
+                },
+                {
+                    "pattern": "page6",
+                    "name": "page6",
+                    "target": "page6"
+                },
+                {
+                    "pattern": "page7",
+                    "name": "page7",
+                    "target": "page7"
+                },
+                {
+                    "pattern": "page8",
+                    "name": "page8",
+                    "target": "page8"
+                },
+                {
+                    "pattern": "studentsreport",
+                    "name": "studentsreport",
+                    "target": "studentsreport"
+                },
+                {
+                    "pattern": "IssuelogReport",
+                    "name": "IssuelogReport",
+                    "target": "IssuelogReport"
+                },
+                {
+                    "pattern": "BranchesReport",
+                    "name": "BranchesReport",
+                    "target": "BranchesReport"
+                },
+                {
+                    "pattern": "BookIssueReport",
+                    "name": "BookIssueReport",
+                    "target": "BookIssueReport"
+                },
+                {
+                    "pattern": "booksReport",
+                    "name": "booksReport",
+                    "target": "booksReport"
+                },
+                {
+                    "pattern": "booksCategoryReport",
+                    "name": "booksCategoryReport",
+                    "target": "booksCategoryReport"
+                }
+            ],
+            "targets": {
+                "login": {
+                "viewType": "XML",
+                "viewName": "Login",
+                "viewId": "Login",
+                "viewLevel": 0
+              },
+                "home": {
+                    "viewType": "XML",
+                    "viewName": "Home",
+                    "viewId": "Home"
+                },
+                "page1": {
+                    "viewType": "XML",
+                    "viewName": "Page1",
+                    "viewId": "Page1"
+                },
+                "page2": {
+                    "viewType": "XML",
+                    "viewName": "Page2",
+                    "viewId": "Page2"
+                },
+                "page3": {
+                    "viewType": "XML",
+                    "viewName": "Page3",
+                    "viewId": "Page3"
+                },
+                "page4": {
+                    "viewType": "XML",
+                    "viewName": "Page4",
+                    "viewId": "Page4"
+                },
+                "page5": {
+                    "viewType": "XML",
+                    "viewName": "Page5",
+                    "viewId": "Page5"
+                },
+                "page6": {
+                    "viewType": "XML",
+                    "viewName": "Page6",
+                    "viewId": "Page6"
+                },
+                "page7": {
+                    "viewType": "XML",
+                    "viewName": "Page7",
+                    "viewId": "Page7"
+                },
+                "page8": {
+                    "viewType": "XML",
+                    "viewName": "Page8",
+                    "viewId": "Page8"
+                },
+                "studentsreport": {
+                    "viewType": "XML",
+                    "viewName": "studentsreport",
+                    "viewId": "studentsreport"
+                },
+                "IssuelogReport": {
+                    "viewType": "XML",
+                    "viewName": "IssuelogReport",
+                    "viewId": "IssuelogReport"
+                },
+                "BranchesReport": {
+                    "viewType": "XML",
+                    "viewName": "BranchesReport",
+                    "viewId": "BranchesReport"
+                },
+                "BookIssueReport": {
+                    "viewType": "XML",
+                    "viewName": "BookIssueReport",
+                    "viewId": "BookIssueReport"
+                },
+                "booksReport": {
+                    "viewType": "XML",
+                    "viewName": "booksReport",
+                    "viewId": "booksReport"
+                },
+                "booksCategoryReport": {
+                    "viewType": "XML",
+                    "viewName": "booksCategoryReport",
+                    "viewId": "booksCategoryReport"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "leftmenu.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "leftmenu"
+    }
+}

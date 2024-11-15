@@ -1,0 +1,64 @@
+<mvc:View controllerName="leftmenu.controller.Page7"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+            <f:Form id="FormChange354" editable="true">
+                <f:title>
+                    <core:Title id="_IDGenTitle1" text="BOOKS CATEGORIES" />
+                </f:title>
+                <f:layout>
+                    <f:ResponsiveGridLayout id="_IDGenResponsiveGridLayout1"
+                        labelSpanXL="3"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="4"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        emptySpanS="0"
+                        columnsXL="1"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false" />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer id="_IDGenFormContainer1">
+                        <f:formElements>
+                            <f:FormElement id="_IDGenFormElement1" label="ID">
+                                <f:fields>
+                                    <!-- Bind the value to the 'id' property in the formData model -->
+                                    <Input value="{formData>/id}" id="name1" required="true" placeholder="provide id" />
+                                </f:fields>    
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenFormElement2" label="CATEGORY">
+                                <f:fields>
+                                    <!-- Bind the value to the 'category' property in the formData model -->
+                                    <Select id="categorySelect" >
+            <items>
+                <core:Item id="_IDGenItem1" key="CLASSIC LITERATURE" text="CLASSIC LITERATURE"/>
+                <core:Item id="_IDGenItem2" key="HISTORICAL FICTION" text="HISTORICAL FICTION"/>
+                <core:Item id="_IDGenItem3" key="SCIENCE FICTION" text="SCIENCE FICTION"/>
+				  <core:Item id="_IDGenItem4" key="ADVENTURE" text="ADVENTURE"/>
+            </items>
+        </Select>
+
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+        </VBox>
+        <FlexBox id="_IDGenFlexBox1" height="100px" alignItems="Start" justifyContent="Center">
+            <Button id="_IDGenButton1" text="SAVE" press="onSave" type="Emphasized" class="sapUiSmallMarginEnd" />
+            <Button id="_IDGenButton2" text="CANCEL" press="onCancel" type="Reject" class="sapUiSmallMarginEnd" />
+            <Button id="_IDGenButton71" text="PREVIEW" press="onNavdetail" />
+        </FlexBox>  
+    </Page>
+</mvc:View>

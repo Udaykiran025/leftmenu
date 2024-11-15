@@ -1,0 +1,41 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m"
+  controllerName="leftmenu.controller.Page2">
+  <Page id="_IDGenPage1"  title="Student Category Registration" class="fade-in-animation">
+    <content>
+      <!--Button id="_IDGenText1" text="Student Cat" /-->
+      <VBox id="_IDGenVBox1" fitContainer="true" class="slide-in-animation">
+                        <f:SimpleForm id="_IDGenSimpleForm1" 
+                            layout="ResponsiveGridLayout"
+                            editable="true"
+                            labelSpanM="3"
+                            columnsM="1"
+                            labelSpanL="4"
+                            columnsL="2"
+                            class="sapUiResponsiveMargin">
+
+                            <Label id="_IDGenLabel1" text="Student Category Registration" class="sapMTitle sapUiSmallMarginBottom"/>
+                            <Label id="_IDGenLabel2" text="Category ID" required="true"/>
+                            <Input id="categoryId" placeholder="Enter Category ID" width="50%" value="{formData>/categoryId}" />
+                            <Label id="_IDGenLabel3" text="Category" required="true"/>
+                            <Input id="category" placeholder="Enter Category" width="50%" value="{formData>/category}" />
+                            <Label id="_IDGenLabel4" text="Max Allowed"/>
+                            <Input id="maxAllowed" placeholder="Enter Max Allowed" type="Number" width="50%" value="{formData>/maxAllowed}" />
+                        </f:SimpleForm>
+                        <HBox id="_IDGenHBox1" justifyContent="Center" class="sapUiMediumMarginTop">
+                            <Button id="_IDGenButton1" text="Save" press="onSave" type="Emphasized" icon="sap-icon://save" class="fade-in-animation sapUiSmallMarginEnd"/>
+                            <Button id="_IDGenButton2" text="Reset" press="onReset" type="Default" icon="sap-icon://reset" class="fade-in-animation sapUiSmallMarginEnd"/>
+                            <Button id="_IDGenButton3" text="Cancel" press="onCancel" type="Reject" icon="sap-icon://decline" class="fade-in-animation"/>
+                        </HBox>
+
+                        <!-- New Button to Show Table Content -->
+                        <HBox id="_IDGenHBox2" justifyContent="Center" class="sapUiMediumMarginTop">
+                            <Button id="showTableContent" text="Show Table Content" press="onShowTableContent" type="Default" icon="sap-icon://table-view" />
+                        </HBox>
+
+                    </VBox>
+    </content>
+  </Page>
+</mvc:View>

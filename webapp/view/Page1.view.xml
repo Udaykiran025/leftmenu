@@ -1,0 +1,100 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    controllerName="leftmenu.controller.Page1">
+
+    <Page id="page1" title="Student Registration">
+        <content>
+          <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+				<f:SimpleForm  id="SimpleFormChange480_12120"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					labelSpanXL="4" 
+					labelSpanL="4"
+					labelSpanM="12"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="0"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="2"
+					columnsM="1"
+					singleContainerFullSize="false" >
+				
+					<core:Title id="_IDGenTitle1" />
+						<Label id="studentidl" text="Student ID" />
+						<Input id="studentid" value="{formData>/StudentId}" type="Number" width="60%" maxLength="10" placeholder="Id"  required="true"/>
+						<Label id="_IDGenLabel341" text="First Name" />
+						<Input id="firstname" value="{formData>/FirstName}" type="Text" width="60%" placeholder="Enter First Name"  required="true"/>
+						<Label id="_IDGenLabel3441" text="Last Name" />
+						<Input id="lastname" value="{formData>/LastName}" type="Text" width="60%" placeholder="Enter Last Name"  required="true"/>
+						
+						<Label id="_IDGenLabel33" text="Roll Number" />
+						<Input id="rollnumber" value="{formData>/RollNum}" type="Text" width="60%"  maxLength="15" required="true" />
+						
+
+						
+						
+						
+
+						<Label id="_IDGenLabel92" text="Year" />
+						<Select id="_IDMA2928"  selectedKey="{formData>/Year1}" width="60%" selectedItem="Default">
+						<core:Item id="yearid"  key="{YearID}"  text="{year}"></core:Item>
+							<items>
+								<core:Item id="id2024" text="2024" key="2024"/>
+								<core:Item id="id2023" text="2023" key="2023"/>
+								<core:Item id="id2022" text="2022" key="2022"/>
+								<core:Item id="id2021" text="2021" key="2021"/>
+								
+							</items>
+						</Select>
+
+						<Label id="_IDGenLabel45"  text="Email ID" />
+						<Input id="emailid" type="Email" value="{formData>/EmailId}" width="60%" placeholder="Enter Email Id"  />
+
+						<Label id="_IDGenLabel233" text="Branch"  />
+						<Select id="branch"  selectedKey="{formData>/Branch}" width="60%" selectedItem="Default" required="true" items="{/zbranchesSet}">		
+						<core:Item key="{Id}" text="{Id} - {Branch}" />											
+						</Select>
+						
+
+						<!--core:Title id="_IDGenTitle233"  /-->
+						
+						<!--Label id="_IDGenLabel743" text="Approved" /-->
+						<!--Input id="approved" value="{formData>/Approved}"  width="30%" maxLength="3" type="Number"  required="true" /-->
+						<!--Label id="_IDGenLabel343" text="Rejected" /-->
+						<!--Input id="rejected" value="{formData>/Rejected}" width="30%" type="Number"  maxLength="3" required="true" /-->
+						<!--Label id="_IDGenLabel43" text="Category" /-->
+						<!--Input id="category" value="{formData>/Category}" width="30%" type="Number"  maxLength="3" required="true" /-->
+
+						<Label id="_IDGenLabel43" text="Category"  />
+						<Select id="category"  selectedKey="{formData>/Category}" width="60%" selectedItem="Default" required="true" items="{/zstudent_categorySet}">		
+						<core:Item key="{CatId}" text="{CatId} - {Category}" />											
+						</Select>
+						<!--Label id="_IDGenLabel039" text="Books Issued" />
+						<Input id="booksissued" value="{formData>/BooksIssued}" width="30%" type="Number"  maxLength="3" required="true" /-->
+					
+						<OverflowToolbar id="_IDGenOverflowToolbar1">
+						<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+							<Button id="_IDGenButton2" type="Accept" text="Save" press="handleSave">
+							<layoutData><OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData41" priority="NeverOverflow" /></layoutData>
+						</Button>
+						<Button id="_IDGenButton52" type="Ghost" text="Reset" press="onReset">
+							<layoutData><OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" priority="NeverOverflow" /></layoutData>
+						</Button>
+						<Button id="_IDGenButton582" type="Emphasized" text="View Report" press="OnviewReport">
+							<layoutData><OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData81" priority="NeverOverflow" /></layoutData>
+						</Button>
+					</OverflowToolbar>
+				</f:SimpleForm>
+				
+			</VBox>
+
+        </content>
+    </Page>
+</mvc:View>

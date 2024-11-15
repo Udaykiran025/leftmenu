@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZLIBRARY_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="zstudents" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="StudentId"/>
+                </Key>
+                <Property Name="StudentId" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="STUDENT ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FirstName" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="FIRST NAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LastName" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="LAST NAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Approved" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="APPROVED" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rejected" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="REJECTED" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Category" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="CATEGORY" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RollNum" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="ROLL NUMBER" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Branch" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="BRANCH" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Year1" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="YEAR1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BooksIssued" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="BOOKS ISSUED" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EmailId" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="EMAIL ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="zstudent_category" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CatId"/>
+                </Key>
+                <Property Name="CatId" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="CATEGORY ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Category" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="DATAELEMENT FOR ZCATEGORY" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MaxAllowed" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="DATAELEMENT FOR ZMAX_ALLOWED" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="zusers" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Userid"/>
+                </Key>
+                <Property Name="Userid" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="USER ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="name of student" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Username" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="USERNAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Password" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="PASSWORD" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VerificationStatus" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="VERIFICATION STATUS" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RememberToken" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="REMEBER TOKEN" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="zbooks" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="BookId"/>
+                </Key>
+                <Property Name="BookId" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="book id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="book title details" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Author" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="details of authore" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="description of the book" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CategoryId" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="category id details" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddedBy" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="adding book details" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AVAILABLE_STATUS" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="AVAILABLE_STATUS" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddedAtTimestamp" Type="Edm.DateTimeOffset" Nullable="false" Precision="0" sap:unicode="false" sap:label="time details" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="zbook_category" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int64" Nullable="false" sap:unicode="false" sap:label="ID of the  student" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Categoryy" Type="Edm.String" Nullable="false" MaxLength="225" sap:unicode="false" sap:label="category details" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="zbook_issue" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IssueId"/>
+                </Key>
+                <Property Name="IssueId" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="issue id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BookId" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="book id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AvailableStatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="AVAILABLE STATUS" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddedBy" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="ADDED BY" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddedAtTimestamp" Type="Edm.DateTimeOffset" Nullable="false" Precision="0" sap:unicode="false" sap:label="ADDED AT TIMESTAMP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="zbook_issuelog" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="BOOK_ISSUELOG_ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BookIssueId" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="BOOK ISSUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StudentId" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="STUDENT ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IssueBy" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="ISSUED BY" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IssuedAt" Type="Edm.DateTimeOffset" Nullable="false" Precision="0" sap:unicode="false" sap:label="ISSUED AT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ReturnTime" Type="Edm.DateTimeOffset" Nullable="false" Precision="0" sap:unicode="false" sap:label="RETURN TIME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TimeStamp" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="CURRENT TIME STAMP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="zbranches" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int64" Nullable="false" sap:unicode="false" sap:label="ID of the  student" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Branch" Type="Edm.String" Nullable="false" MaxLength="55" sap:unicode="false" sap:label="branch of studing" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZLIBRARY_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="zstudentsSet" EntityType="ZLIBRARY_SRV.zstudents" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="zstudent_categorySet" EntityType="ZLIBRARY_SRV.zstudent_category" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="zusersSet" EntityType="ZLIBRARY_SRV.zusers" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="zbooksSet" EntityType="ZLIBRARY_SRV.zbooks" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="zbook_categorySet" EntityType="ZLIBRARY_SRV.zbook_category" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="zbook_issueSet" EntityType="ZLIBRARY_SRV.zbook_issue" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="zbook_issuelogSet" EntityType="ZLIBRARY_SRV.zbook_issuelog" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="zbranchesSet" EntityType="ZLIBRARY_SRV.zbranches" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <atom:link rel="self" href="http://sapbtp.com:8023/sap/opu/odata/sap/ZLIBRARY_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://sapbtp.com:8023/sap/opu/odata/sap/ZLIBRARY_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

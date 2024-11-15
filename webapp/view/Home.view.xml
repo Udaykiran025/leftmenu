@@ -1,0 +1,9 @@
+<mvc:View controllerName="leftmenu.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="Home Page">
+        <content>
+            <Image id="_IDGenImage" src="/home/user/projects/leftmenu/images/Library-Management-System-2048x1201.png" alt="Home Page Image" width="200px" />
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,55 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="leftmenu.controller.Page4">
+    <Page id="_IDGenPage11" title="Book Issue Log Details">
+        <content>
+            <HBox id="_IDGenHBox11">
+                <Label id="_IDGenLabel11" text="Enter Book Issue Log ID" />
+                <Input id="bookIssueLogIdInput" width="200px" />
+                
+                <Button id="_IDGenButton16" text="Fetch" press="onFetchPress" />
+            </HBox>
+            <Panel id="_IDGenPanel1"  headerText="Book Issue Log Information" class="sapUiResponsiveMargin" >
+                <content>
+                    <Label id="_IDGenLabel12" text="ID" />
+                    <Input id="_IDGenInput1" value="{bookIssueLog>/Id}" editable="false" />
+
+                    <Label id="_IDGenLabel13" text="Book Issue ID" />
+                    <Input id="_IDGenInput2" value="{bookIssueLog>/BookIssueId}" editable="false" />
+
+                    <Label id="_IDGenLabel114" text="Student ID" />
+                    <Input id="_IDGenInput3" value="{bookIssueLog>/StudentId}" editable="false" />
+
+                    <Label id="_IDGenLabe15" text="Issued By" />
+                    <Input id="_IDGenInput4" value="{bookIssueLog>/IssueBy}" editable="false" />
+
+                    <Label id="_IDGenLabel16" text="Issued At" />
+                    <Input id="_IDGenInput5" value="{bookIssueLog>/IssuedAt}" editable="false" />
+
+                    <Label id="_IDGenLabel17" text="Return Time" />
+                    <!--Input id="_IDGenInput6" value="{bookIssueLog>/ReturnTime}" editable="true" /-->
+                    <DateTimePicker    
+		        	id="DTP5"
+		        	placeholder="enter current date and time"
+		        	value="{
+			    	path:'/valueDTP5',
+			    	type:'sap.ui.model.type.DateTime',
+			    	formatOptions: {
+					style: 'medium',
+					strictParsing: true
+				}
+			}"
+			class="sapUiSmallMarginBottom"/>
+                    <Label id="_IDGenLabel8" text="Timestamp" />
+                    <Input id="_IDGenInput7" value="{bookIssueLog>/TimeStamp}" editable="false" />
+                </content>
+            </Panel>
+        </content>
+        <HBox id="hd" justifyContent="Center">      
+        <ToolbarSpacer id="_IDGenToolbarpacer1"  ></ToolbarSpacer>
+        <Button id="_IDGnButton12" text="Create" type="Accept" icon="sap-icon://create" press="handleSave"></Button>
+       <ToolbarSpacer id="_IGenToolbarpacer1" width="30px" ></ToolbarSpacer>
+        <Button id="_IDGeButton2" text="Reset"  type="Neutral" press="handleDelete"></Button> 
+        <ToolbarSpacer id="_IGenToolbarpace1" width="30px" ></ToolbarSpacer>
+        <Button id="_IDGeButto2" text="View Report"  type="Attention" press="Viewreport1"></Button>          
+                </HBox>
+    </Page>
+</mvc:View>

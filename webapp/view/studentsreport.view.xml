@@ -1,0 +1,54 @@
+	<mvc:View controllerName="leftmenu.controller.studentsreport"
+			xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+			xmlns:l="sap.ui.layout"
+			xmlns:f="sap.ui.layout.form"
+			xmlns:u="sap.ui.unified"
+			xmlns:core="sap.ui.core"  class="viewPadding"
+			xmlns="sap.m">
+			
+			<Page id="page" title="{i18n>title}">
+				<content >
+            <Button id="_IDGenButton2"   text="Back" press="OnPressBack" ></Button>
+
+             <Table id="_IDGenTable1" items="{/zstudentsSet}">
+                <columns>
+                    <Column id="_IDGenColumn145"><Text id="_IDGenText233" text="StudentId"/></Column>
+                    <Column id="_IDGenColumn1"><Text id="_IDGenText3" text="FirstName"/></Column>
+                    <Column id="_IDGenColumn2"><Text id="_IDGenText4" text="LastName"/></Column>
+                    <Column id="_IDGenColumn3"><Text id="_IDGenText5" text="Approved"/></Column>
+                    <Column id="_IDGenColumn33"><Text id="_IDGenText51" text="Rejected"/></Column>
+                    <Column id="_IDGenColumn34"><Text id="_IDGenText52" text="Category"/></Column>
+                    <Column id="_IDGenColumn343"><Text id="_IDGenText59" text="RollNum"/></Column>
+                    <Column id="_IDGenColum3"><Text id="_IDGenText551" text="Branch"/></Column>
+                    <Column id="_IDGenColumn44"><Text id="_IDGenText552" text="Year1"/></Column>
+                    <Column id="_IDGenColumn23"><Text id="_IDGenText559" text="BooksIssued"/></Column>
+                    <Column id="_IDGenColumn83"><Text id="_IDGenText059" text="EmailId"/></Column>
+                    <Column id="_IDGenColumn023"><Text id="_IDGenText049" text="Action"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1" type="Navigation" press="onNavObject">
+                        <cells>
+                            <Text id="_IDGenText566" text="{StudentId}"/>
+                            <Text id="_IDGenText6" text="{FirstName}"/>
+                            <Text id="_IDGenText7" text="{LastName}"/>
+                            <Text id="_IDGenText87" text="{Approved}"/>
+                            <Text id="_IDGenText21" text="{Rejected}"/>
+                            <Text id="_IDGenText22" text="{Category}"/>
+                            <Text id="_IDGenText521" text="{RollNum}"/>
+                            <Text id="_IDGenText902" text="{Branch}"/>
+                            <Text id="_IDGenText5021" text="{Year1}"/>
+                            <Text id="_IDGenText92" text="{BooksIssued}"/>
+                            <Text id="_IDGenText242" text="{EmailId}"/>
+                            <HBox id="_IDGenHBox1">
+                                <Button id="_IDGenButton31" class='sapUiTinyMarginEnd' icon="sap-icon://delete" press="ondelete"></Button>
+                                <Button id="_IDGenButton1" icon="sap-icon://edit-outside" press="onupdate"></Button>
+                            </HBox>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+				</content>
+				
+				
+			</Page>
+		</mvc:View>

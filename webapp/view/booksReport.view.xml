@@ -1,0 +1,101 @@
+<mvc:View xmlns:upload="sap.m.upload" xmlns:unified="sap.ui.unified" controllerName="leftmenu.controller.booksReport"
+   	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	 <Page id="_IDGenPage1"
+		class="sapUiContentPadding">
+        <content>
+        <Button id="button" text="BACK" press="onback"></Button>
+      <Table id="bookissueTable" items="{/zbooksSet}" inset="false"
+             growing="true" growingScrollToLoad="true" mode="SingleSelectMaster"
+             selectionChange="onListItemPress">
+<Dialog id="updateDialog" title="Update bookS">
+            <content>
+                <VBox id="_IDGenVBox1">
+                    <Label id="_IDGenLabel1" text="BOOK ID" />
+                    <Input id="updateIssueId" value="{BookId}" />
+                    <Label id="_IDGenLabel2" text="TITLE" />
+                    <Input id="updateBookId" value="{Title}" />
+                    <Label id="_IDGenLabel3" text="AUTHOR" />
+                    <Input id="updateAvailableStatus" value="{Author}" />
+                    <Label id="_IDGenLabe24" text="DESCRIPTION" />
+                    <Input id="updateAddedByI" value="{Description}" />
+					 <Label id="_IDGenLabe4" text="CATEGORY ID" />
+                    <Input id="updateAddedByJ" value="{CategoryId}" />
+					 <Label id="_IDGenLabe34" text="ADDED BY" />
+                    <Input id="updateAddedByK" value="{AddedBy}" />
+					 <Label id="_IDGenLabe44" text="DATE TIME" />
+                    <Input id="updateAddedByL" value="{AddedAtTimestamp}" />
+                </VBox>
+            </content>
+            <beginButton>
+                <Button id="updateButton" text="Update" type="Emphasized" press="onUpdateConfirm" />
+            </beginButton>
+            <endButton>
+                <Button id="updateCancelButton" text="Cancel" type="Transparent" press="onUpdateCancel" />
+            </endButton>
+        </Dialog>
+        <Dialog id="deleteDialog" title="Confirm Delete">
+        <content>
+            <Text id="_IDGenText64" text="Are you sure you want to delete this item?" />
+        </content>
+        <beginButton>
+            <Button id="_IDGenButton2" text="Delete" type="Reject" press="onDeleteConfirm" />
+        </beginButton>
+        <endButton>
+            <Button id="_IDGenButton3" text="Cancel" type="Transparent" press="onDeleteCancel" />
+        </endButton>
+    </Dialog>
+        <columns>
+        
+          <Column id="_IDGenColumn1">
+            <Text id="_IDGenText1" text="BOOK ID"/>
+          </Column>
+          <Column id="_IDGenColumn2">
+            <Text id="_IDGenText2" text="TITLE"/>
+          </Column>
+          <Column id="_IDGenColumn3">
+            <Text id="_IDGenText3" text="AUTHOR"/>
+          </Column>
+          <Column id="_IDGenColumn5">
+            <Text id="_IDGenText5" text="DESCRIPTION"/>
+          </Column>
+          <Column id="_IDGenColumn51">
+            <Text id="_IDGenText51" text="CATEGORY ID"/>
+          </Column>
+          <Column id="_IDGenColumn6">
+            <Text id="_IDGenText6" text="ADDED BY"/>
+          </Column> 
+		   <Column id="_IDGenColumn7">
+            <Text id="_IDGenText7" text="DATE TIME"/>
+          </Column> 
+		     <Column id="_IDGenColumn8">
+            <Text id="_IDGenText8" text="ACTION"/>
+          </Column> 
+             
+        </columns>
+
+        <items>
+          <ColumnListItem id="_IDGenColumnListItem1" press="onListItemPress">
+            <cells>
+              <ObjectIdentifier id="_IDGenObjectIdentifier1" title="{BookId}"/>
+              <ObjectIdentifier id="_IDGenObjectIdentifier2" title="{Title}"/>
+              <ObjectIdentifier id="_IDGenObjectIdentifier3" title="{Author}"/>
+              <ObjectIdentifier id="_IDGenObjectIdentifier4" title="{Description}"/>
+               <ObjectIdentifier id="_IDGenObjectIdentifier5" title="{CategoryId}"/>
+			    <ObjectIdentifier id="_IDGenObjectIdentifier6" title="{AddedBy}"/>
+				 <ObjectIdentifier id="_IDGenObjectIdentifier7" title="{AddedAtTimestamp}"/>
+               <HBox id="_IDGenHBox1" >
+              <Button id="_IDGenButtn1" icon="sap-icon://edit-outside" press="onEdit"></Button>
+              <Button id="_IDGenButton1" icon="sap-icon://delete" 
+               press="onListItem1" ></Button>
+              </HBox>
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </content>  
+        </Page>
+</mvc:View>

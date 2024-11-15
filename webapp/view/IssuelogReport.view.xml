@@ -1,0 +1,102 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table"
+    controllerName="leftmenu.controller.IssuelogReport">
+
+    <Page id="_IDGenPage1" title="Report View">
+        <content>
+        <Button id="_IDGnButton1" text="Back" press="handleSave"></Button>
+            <table:Table
+                id="bookIssueLogTable"
+                rows="{/zbook_issuelogSet}"
+                visibleRowCount="10"
+                selectionMode="Single">
+
+                <table:columns>
+                    <table:Column id="_IDGenColumn1">
+                        <Label id="IDGenLabel1" text="ID"/>
+                        <table:template>
+                            <Text id="_IDGeext1" text="{Id}"/>
+                        </table:template>
+                    </table:Column>
+                    <table:Column id="_IDGenColumn2">
+                        <Label id="_IDGenLabel1" text="Book Issue ID"/>
+                        <table:template>
+                            <Text id="_IDGenText1" text="{BookIssueId}"/>
+                        </table:template>
+                    </table:Column>
+                    <table:Column id="_IDGenColumn3">
+                        <Label id="_IDGenLabel2" text="Student ID"/>
+                        <table:template>
+                            <Text id="_IDGenText2" text="{StudentId}"/>
+                        </table:template>
+                    </table:Column>
+                    <table:Column id="_IDGenColumn4">
+                        <Label id="_IDGenLabel3" text="Issued By"/>
+                        <table:template>
+                            <Text id="_IDGenText3" text="{IssueBy}"/>
+                        </table:template>
+                    </table:Column>
+                    <table:Column id="_IDGenColumn5">
+                        <Label id="_IDGenLabel4" text="Issued At"/>
+                        <table:template>
+                            <Text id="_IDGenText4" text="{IssuedAt}"/>
+                        </table:template>
+                    </table:Column>
+                    <!--table:Column id="_IDGenColumn6">
+                        <Label id="_IDGenLabel5" text="Return Time"/>
+                        <table:template>
+                            <Text id="_IDGenText5" text="{ReturnTime}"/>
+                        </table:template>
+                    </table:Column-->
+                    <table:Column id="_IDGenColumn7">
+                        <Label id="_IDGenLabel6" text="Current Time Stamp"/>
+                        <table:template>
+                            <Text id="_IDGenText6" text="{TimeStamp}"/>
+                        </table:template>
+                    </table:Column>
+                    <table:Column id="_IDGenColumn8">
+                        <Label id="_IDGenLabel7" text="Action"/>
+                        <table:template>
+                            <HBox id="_IDGenHBox1">
+                                <Button id="_IDGenButton31" class="sapUiTinyMarginEnd" icon="sap-icon://delete" press="onDelete"/>
+                                <Button id="_IDGenButton1" icon="sap-icon://edit-outside" press="onUpdate"/>
+                            </HBox>
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+            </table:Table>
+
+            <!-- Update Dialog Definition -->
+            <Dialog
+                id="updateDialog"
+                title="Update Book Issue Log"
+                stretchOnPhone="true">
+                <content>
+                    <VBox id="updateVBox">
+                        <Label id="updateIdLabel" text="ID"/>
+                        <Input id="inputId" value="{Id}" editable="false" />
+                        <Label id="updateBookIssueIdLabel" text="Book Issue ID"/>
+                        <Input id="inputBookIssueId" value="{BookIssueId}" />
+                        <Label id="updateStudentIdLabel" text="Student ID"/>
+                        <Input id="inputStudentId" value="{StudentId}" />
+                        <Label id="updateIssueByLabel" text="Issued By"/>
+                        <Input id="inputIssueBy" value="{IssueBy}" />
+                        <Label id="updateIssuedAtLabel" text="Issued At"/>
+                        <Input id="inputIssuedAt" value="{IssuedAt}" editable="false" />
+                        <Label id="updateReturnTimeLabel" text="Return Time"/>
+                        <Input id="inputReturnTime" value="{ReturnTime}" editable="false"  />
+                        <Label id="updateTimeStampLabel" text="Current Time Stamp"/>
+                        <Input id="inputTimeStamp" value="{TimeStamp}" editable="false"  />
+                    </VBox>
+                </content>
+                <buttons>
+                    <Button id="saveButton" text="Save" press="onSaveUpdate"/>
+                    <Button id="cancelButton" text="Cancel" press="onCancelUpdate"/>
+                </buttons>
+            </Dialog>
+        </content>
+    </Page>
+</mvc:View>
