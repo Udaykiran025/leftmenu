@@ -103,7 +103,7 @@ Each form includes a **"View Report"** feature:
 
 ## Technologies Used
 ### Front-End:
-1. HTML
+1. XML
 2. JavaScript
 ### Back-End:
 SAP ABAP
