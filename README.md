@@ -17,7 +17,7 @@
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
 
-## leftmenu
+## Library Management System
 
 An SAP Fiori application.
 
