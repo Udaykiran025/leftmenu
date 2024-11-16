@@ -103,9 +103,9 @@ Each form includes a **"View Report"** feature:
 
 ## Technologies Used
 ### Front-End:
-1. HTML: For structuring the web pages.
-2. JavaScript: For dynamic user interactions and client-side validations.
+1. HTML
+2. JavaScript
 ### Back-End:
-**SAP ABAP**: For managing the database, business logic, and server-side operations.
+SAP ABAP
 
 
