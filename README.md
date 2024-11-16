@@ -101,4 +101,11 @@ Each form includes a **"View Report"** feature:
   - **Edit**: Modify existing records.
   - **Delete**: Remove records from the system.
 
+## Technologies Used
+### Front-End:
+- **HTML**: For structuring the web pages.
+-**JavaScript**: For dynamic user interactions and client-side validations.
+### Back-End:
+-**SAP ABAP**: For managing the database, business logic, and server-side operations.
+
 
